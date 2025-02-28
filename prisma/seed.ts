@@ -44,6 +44,7 @@ const main = async () => {
             "Cebola",
             "Picles",
           ],
+          stock: 50, // Valor exemplo
         },
         {
           name: "Novo Brabo Melt Onion Rings",
@@ -64,6 +65,7 @@ const main = async () => {
             "Queijo processado sabor cheddar",
             "Molho lácteo com queijo tipo cheddar",
           ],
+          stock: 50, // Valor exemplo
         },
         {
           name: "McCrispy Chicken Elite",
@@ -84,6 +86,7 @@ const main = async () => {
             "Queijo sabor cheddar",
             "Carne 100% de peito de frango",
           ],
+          stock: 50, // Valor exemplo
         },
         {
           name: "Duplo Cheddar McMelt",
@@ -100,6 +103,7 @@ const main = async () => {
             "Molho lácteo com queijo tipo cheddar",
             "Cebola ao molho shoyu",
           ],
+          stock: 50, // Valor exemplo
         },
       ],
     });
@@ -124,6 +128,8 @@ const main = async () => {
             "Cebola",
             "Picles",
           ],
+          stock: 50, // Valor exemplo
+
           price: 39.9,
           imageUrl:
             "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQKfI6fivqActTvBGLXfQe4a8CJ6d3HiR7USPK",
@@ -144,6 +150,8 @@ const main = async () => {
             "Queijo processado sabor cheddar",
             "Molho lácteo com queijo tipo cheddar",
           ],
+          stock: 50, // Valor exemplo
+
           price: 41.5,
           imageUrl:
             "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQ99rtECuYaDgmA4VujBU0wKn2ThXJvF3LHfyc",
@@ -164,6 +172,8 @@ const main = async () => {
             "Queijo sabor cheddar",
             "Carne 100% de peito de frango",
           ],
+          stock: 50, // Valor exemplo
+
           price: 39.9,
           imageUrl:
             "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQUY0VlDTmvPeJLoyOjzNsMqFdxUI423nBl6br",
@@ -180,6 +190,8 @@ const main = async () => {
             "Molho lácteo com queijo tipo cheddar",
             "Cebola ao molho shoyu",
           ],
+          stock: 50, // Valor exemplo
+
           price: 36.2,
           imageUrl:
             "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQBBmifbjzEVXRoycAtrP9vH45bZ6WDl3QF0a1",
@@ -201,6 +213,8 @@ const main = async () => {
           description: "Batatas fritas crocantes e sequinhas. Vem bastante!",
           ingredients: [],
           price: 10.9,
+          stock: 50, // Valor exemplo
+
           imageUrl:
             "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQNd3jSNrcJroaszwjUAlM6iSO5ZTx2HV70t31",
           menuCategoryId: frenchFriesCategory.id,
@@ -212,6 +226,8 @@ const main = async () => {
             "Batatas fritas crocantes e sequinhas. Vem uma média quantidade!",
           ingredients: [],
           price: 9.9,
+          stock: 50, // Valor exemplo
+
           imageUrl:
             "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQ7Y6lv9tkc0L9oMIXZsFJtwnBh2KCz3y6uSW1",
           menuCategoryId: frenchFriesCategory.id,
@@ -223,6 +239,8 @@ const main = async () => {
             "Batatas fritas crocantes e sequinhas. Vem pouquinho (é bom pra sua dieta)!",
           ingredients: [],
           price: 5.9,
+          stock: 50, // Valor exemplo
+
           imageUrl:
             "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQ5toOZxYa1oARJCUGh4EY3x8NjXHtvZ7lnVfw",
           menuCategoryId: frenchFriesCategory.id,
@@ -243,6 +261,8 @@ const main = async () => {
           description: "Coca-cola gelada para acompanhar seu lanche.",
           ingredients: [],
           price: 5.9,
+          stock: 50, // Valor exemplo
+
           imageUrl:
             "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQJS1b33q29eEsh0CVmOywrqx1UPnJpRGcHN5v",
           menuCategoryId: drinksCategory.id,
@@ -253,6 +273,8 @@ const main = async () => {
           description: "Fanta Laranja gelada para acompanhar seu lanche.",
           ingredients: [],
           price: 5.9,
+          stock: 50, // Valor exemplo
+
           imageUrl:
             "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQW7Kxm9gniS9XCLQu7Nb4jvBYZze16goaOqsK",
           menuCategoryId: drinksCategory.id,
@@ -263,6 +285,8 @@ const main = async () => {
           description: "A bebida favorita do Cristiano Ronaldo.",
           ingredients: [],
           price: 2.9,
+          stock: 50, // Valor exemplo
+
           imageUrl:
             "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQ7i05S5tkc0L9oMIXZsFJtwnBh2KCz3y6uSW1",
           menuCategoryId: drinksCategory.id,
@@ -283,6 +307,8 @@ const main = async () => {
           description: "Casquinha de sorvete sabor baunilha.",
           ingredients: [],
           price: 3.9,
+          stock: 50, // Valor exemplo
+
           imageUrl:
             "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQtfuQrAKkI75oJfPT0crZxvX82ui9qV3hLFdY",
           menuCategoryId: desertsCategory.id,
@@ -293,6 +319,8 @@ const main = async () => {
           description: "Casquinha de sorvete sabor chocolate.",
           ingredients: [],
           price: 3.9,
+          stock: 50, // Valor exemplo
+
           imageUrl:
             "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQBH21ijzEVXRoycAtrP9vH45bZ6WDl3QF0a1M",
           menuCategoryId: desertsCategory.id,
@@ -303,6 +331,8 @@ const main = async () => {
           description: "Casquinha de sorvete sabor baunilha e chocolate.",
           ingredients: [],
           price: 2.9,
+          stock: 50, // Valor exemplo
+
           imageUrl:
             "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQ4rBrtULypXmR6JiWuhzS8ALjVkrF3yfatC7E",
           menuCategoryId: desertsCategory.id,
