@@ -1,6 +1,6 @@
 # README - Self-Checkout McDonald's (FullStackWeek)
 
-![App Screenshot](/public/prints/banner-project-mcdonalds.jpg)
+![App Screenshot](/public/banner-project-mcdonalds.jpg)
 
 ## 🍔 Visão Geral
 
