@@ -47,23 +47,22 @@ const ProductDetails = ({ product }: ProductDetailsProps) => {
     toggleCart();
   };
   return (
-    <>
-      <div className="relative z-50 mt-[-1.5rem] flex flex-auto flex-col overflow-hidden rounded-t-3xl p-5">
-        <div className="flex-auto overflow-hidden">
-          {/* RESTAURANTE */}
-          <div className="flex items-center gap-1.5">
-            <Image
-              src={product.restaurant.avatarImageUrl}
-              alt={product.restaurant.name}
-              width={16}
-              height={16}
-              className="rounded-full"
-            />
-            <p className="text-xs text-muted-foreground">
-              {product.restaurant.name}
-            </p>
-          </div>
-
+    <div className="flex h-full flex-col px-5">
+      <div className="flex-1 overflow-y-auto">
+        {/* RESTAURANTE */}
+        <div className="flex items-center gap-1.5">
+          <Image
+            src={product.restaurant.avatarImageUrl}
+            alt={product.restaurant.name}
+            width={16}
+            height={16}
+            className="rounded-full"
+          />
+          <p className="text-xs text-muted-foreground">
+            {product.restaurant.name}
+          </p>
+        </div>
+        <div className="">
           {/* NOME DO PRODUTO */}
           <h2 className="mt-1 text-xl font-semibold">{product.name}</h2>
 
@@ -90,37 +89,38 @@ const ProductDetails = ({ product }: ProductDetailsProps) => {
               </Button>
             </div>
           </div>
+          <div className="mt-4 pb-8">
+            <Button className="w-full rounded-full" onClick={handleAddToCart}>
+              Adicionar à sacola
+            </Button>
+          </div>
+          {/* SOBRE */}
+          <div className="mt-6 space-y-3">
+            <h4 className="font-semibold">Sobre</h4>
+            <p className="text-sm text-muted-foreground">
+              {product.description}
+            </p>
+          </div>
 
-          <ScrollArea className="h-full">
-            {/* SOBRE */}
-            <div className="mt-6 space-y-3">
-              <h4 className="font-semibold">Sobre</h4>
-              <p className="text-sm text-muted-foreground">
-                {product.description}
-              </p>
+          {/* INGREDIENTS */}
+          <div className="mt-6 space-y-3">
+            <div className="flex items-center gap-1">
+              <ChefHatIcon size={18} />
+              <h4 className="font-semibold">Ingredientes</h4>
             </div>
-
-            {/* INGREDIENTS */}
-            <div className="mt-6 space-y-3">
-              <div className="5 flex items-center gap-1">
-                <ChefHatIcon size={18} />
-                <h4 className="font-semibold">Ingredientes</h4>
-              </div>
-              <ul className="text-muted-fo list-disc px-5 text-sm text-muted-foreground">
+            <ScrollArea className="h-[200px]">
+              <ul className="list-disc px-5 text-sm text-muted-foreground">
                 {product.ingredients.map((ingredient) => (
                   <li key={ingredient}>{ingredient}</li>
                 ))}
               </ul>
-            </div>
-          </ScrollArea>
+            </ScrollArea>
+          </div>
         </div>
 
-        <Button className="w-full rounded-full" onClick={handleAddToCart}>
-          Adicionar à sacola
-        </Button>
+        <CartSheet />
       </div>
-      <CartSheet />
-    </>
+    </div>
   );
 };
 

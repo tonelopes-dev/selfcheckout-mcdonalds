@@ -47,71 +47,73 @@ const Products = ({ products }: ProductsProps) => {
   };
 
   return (
-    <div className="space-y-3 px-5">
+    <div className="space-y-3 px-5 pb-24">
       {products.map((product) => (
         <div
           key={product.id}
-          className="flex items-center justify-between gap-10 border-b py-3"
+          className="flex flex-col items-center justify-between border-b py-3"
         >
-          {/* ESQUERDA */}
-          <div className="flex-1">
-            <Link
-              href={`/${slug}/menu/${product.id}?consumptionMethod=${consumptionMethod}`}
-            >
-              <h3 className="text-sm font-medium">{product.name}</h3>
-              <p className="line-clamp-2 text-sm text-muted-foreground">
-                {product.description}
-              </p>
-            </Link>
-            <div className="mt-2 flex items-center justify-between">
-              <p className="text-sm font-semibold">
-                {formatCurrency(product.price)}
-              </p>
-              <div className="flex items-center gap-2">
-                <div className="flex items-center gap-1">
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    className="h-7 w-7"
-                    onClick={() => handleDecreaseQuantity(product.id)}
-                  >
-                    <ChevronLeftIcon className="h-4 w-4" />
-                  </Button>
-                  <span className="w-4 text-center">
-                    {quantities[product.id] || 1}
-                  </span>
-                  <Button
-                    variant="destructive"
-                    size="icon"
-                    className="h-7 w-7"
-                    onClick={() => handleIncreaseQuantity(product.id)}
-                  >
-                    <ChevronRightIcon className="h-4 w-4" />
-                  </Button>
-                </div>
-                <Button
-                  variant="default"
-                  size="sm"
-                  onClick={() => handleAddToCart(product)}
-                >
-                  Adicionar
-                </Button>
+          <div className="flex items-center justify-between gap-10 py-3">
+            {/* ESQUERDA */}
+            <div className="flex-1">
+              <Link
+                href={`/${slug}/menu/${product.id}?consumptionMethod=${consumptionMethod}`}
+              >
+                <h3 className="text-sm font-medium">{product.name}</h3>
+                <p className="line-clamp-2 text-sm text-muted-foreground">
+                  {product.description}
+                </p>
+              </Link>
+              <div className="mt-2 flex items-center justify-between">
+                <p className="text-sm font-semibold">
+                  {formatCurrency(product.price)}
+                </p>
               </div>
             </div>
-          </div>
 
-          {/* DIREITA */}
-          <Link
-            href={`/${slug}/menu/${product.id}?consumptionMethod=${consumptionMethod}`}
-            className="relative min-h-[82px] min-w-[120px]"
-          >
-            <Image
-              src={product.imageUrl}
-              alt={product.name}
-              fill
-              className="rounded-lg object-contain"
-            />
-          </Link>
+            {/* DIREITA */}
+            <Link
+              href={`/${slug}/menu/${product.id}?consumptionMethod=${consumptionMethod}`}
+              className="relative min-h-[82px] min-w-[120px]"
+            >
+              <Image
+                src={product.imageUrl}
+                alt={product.name}
+                fill
+                className="rounded-lg object-contain"
+              />
+            </Link>
+          </div>
+          <div className="flex w-full items-center justify-between gap-2">
+            <div className="flex items-center gap-1">
+              <Button
+                variant="outline"
+                size="icon"
+                className="h-7 w-7"
+                onClick={() => handleDecreaseQuantity(product.id)}
+              >
+                <ChevronLeftIcon className="h-4 w-4" />
+              </Button>
+              <span className="w-4 text-center">
+                {quantities[product.id] || 1}
+              </span>
+              <Button
+                variant="destructive"
+                size="icon"
+                className="h-7 w-7"
+                onClick={() => handleIncreaseQuantity(product.id)}
+              >
+                <ChevronRightIcon className="h-4 w-4" />
+              </Button>
+            </div>
+            <Button
+              variant="default"
+              size="sm"
+              onClick={() => handleAddToCart(product)}
+            >
+              Adicionar
+            </Button>
+          </div>
         </div>
       ))}
     </div>
