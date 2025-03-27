@@ -31,9 +31,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} mx-auto max-w-lg antialiased`}>
+      <body className={`${poppins.className} antialiased`}>
         <CartProvider>{children}</CartProvider>
-
         <Toaster />
       </body>
     </html>
