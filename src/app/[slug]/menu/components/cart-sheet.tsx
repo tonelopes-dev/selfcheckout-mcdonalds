@@ -1,3 +1,5 @@
+"use client";
+
 import { useContext, useState } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -24,7 +26,7 @@ const CartSheet = () => {
           <SheetTitle className="text-left">Sacola</SheetTitle>
         </SheetHeader>
         <div className="flex h-full flex-col py-5">
-          <div className="flex-auto">
+          <div className="flex-auto mb-8">
             {products.map((product) => (
               <CartProductItem key={product.id} product={product} />
             ))}

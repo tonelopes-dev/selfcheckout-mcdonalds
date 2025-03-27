@@ -2,10 +2,9 @@ import { notFound } from "next/navigation";
 
 import { db } from "@/lib/prisma";
 
+import CartSheet from "./components/cart-sheet";
 import RestaurantCategories from "./components/categories";
 import RestaurantHeader from "./components/header";
-
-
 
 interface RestaurantMenuPageProps {
   params: Promise<{ slug: string }>;
@@ -40,6 +39,7 @@ const RestaurantMenuPage = async ({
     <div>
       <RestaurantHeader restaurant={restaurant} />
       <RestaurantCategories restaurant={restaurant} />
+      <CartSheet />
     </div>
   );
 };
