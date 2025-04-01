@@ -31,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} mx-auto w-[50%] antialiased`}>
+      <body className={`${poppins.className} mx-auto w-[524px] antialiased`}>
         <CartProvider>{children}</CartProvider>
         <Toaster />
       </body>
